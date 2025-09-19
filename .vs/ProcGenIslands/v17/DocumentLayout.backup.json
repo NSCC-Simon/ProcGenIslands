@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|c:\\users\\w0282611\\documents\\procgenislands\\procgenislands\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|solutionrelative:procgenislands\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|c:\\users\\w0282611\\documents\\procgenislands\\procgenislands\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|solutionrelative:procgenislands\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|c:\\users\\w0282611\\documents\\procgenislands\\procgenislands\\imaprenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4BBFF62-55AC-472C-8004-B9AC8B7B892F}|ProcGenIslands\\ProcGenIslands.csproj|solutionrelative:procgenislands\\imaprenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\Class1.cs",
+              "RelativeDocumentMoniker": "ProcGenIslands\\Class1.cs",
+              "ToolTip": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\Class1.cs",
+              "RelativeToolTip": "ProcGenIslands\\Class1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T23:45:53.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMapRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\IMapRenderer.cs",
+              "RelativeDocumentMoniker": "ProcGenIslands\\IMapRenderer.cs",
+              "ToolTip": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\IMapRenderer.cs",
+              "RelativeToolTip": "ProcGenIslands\\IMapRenderer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T23:41:28.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\Program.cs",
               "RelativeDocumentMoniker": "ProcGenIslands\\Program.cs",
               "ToolTip": "C:\\Users\\W0282611\\Documents\\ProcGenIslands\\ProcGenIslands\\Program.cs",
               "RelativeToolTip": "ProcGenIslands\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAA1wD8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-17T11:15:52.75Z",
               "EditorCaption": ""
