@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProcGenIslands
 {
-    internal class CoolRenderer : IMapRenderer
+    internal class CoolRenderer : IMapRendererStrategy
     {
         public void DrawMap(TileType[][,] mapLayers)
         {
@@ -32,10 +32,16 @@ namespace ProcGenIslands
     }
 
 
-    internal class BasicRenderer : IMapRenderer
+    internal class BasicRenderer : IMapRendererStrategy
     {
+
+        // screen 
+
         public void DrawMap(TileType[][,] mapLayers)
         {
+
+            
+
             foreach (TileType[,] map in mapLayers)
             {
                 for (int i = 0; i < map.GetLength(0); i++)
@@ -43,6 +49,7 @@ namespace ProcGenIslands
                     for (int j = 0; j < map.GetLength(1); j++)
                     {
                         if (map[j, i] == TileType.None) continue;
+                        
                         Console.SetCursorPosition(j * 2, i);
                         Console.BackgroundColor = Program._tileColors[map[j, i]];
                         Console.Write("  ");

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProcGenIslands
 {
-    internal interface IMapRenderer
+    internal interface IMapRendererStrategy
     {
-        void DrawMap(TileType[][,] mapLayers);
 
+           
+        void DrawMap(TileType[][,] mapLayers);
+       
 
     }
 }

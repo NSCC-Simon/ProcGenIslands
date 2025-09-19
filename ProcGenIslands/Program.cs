@@ -37,8 +37,7 @@ namespace ProcGenIslands
         static int mapHeight = 20;
         static TileType[,] mapBaseLayer = new TileType[mapWidth, mapHeight];
         static TileType[,] mapIslandLayer = new TileType[mapWidth, mapHeight];
-        static int minStartingIslands = 3;
-        static int maxStartingIslands = 7;
+       
         static int amountOfIslands;
 
         static List<(int, int)> islandStartingCoords = new List<(int, int)>();
@@ -61,7 +60,7 @@ namespace ProcGenIslands
         static void Main(string[] args)
         {
             InitializeMap();
-            IMapRenderer mapRenderer = new CoolRenderer();
+            IMapRendererStrategy mapRenderer = new BasicRenderer();
             
             
             CreateIslands(TileType.Water, TileType.DeepWater, (2,5),(8,12));
@@ -78,22 +77,6 @@ namespace ProcGenIslands
             Console.ReadKey();
 
         }
-
-
-        static void CreateBridge(TileType typeToConnect)
-        {
-            List<(int, int)> tilePositions = new List<(int, int)>();
-            for (int i = 0; i < mapBaseLayer.GetLength(0); i++)
-            {
-                for(int j = 0; j < mapBaseLayer.GetLength(1); j++)
-                {
-                    if (mapBaseLayer[j, i] == typeToConnect) tilePositions.Add((j, i));
-                }
-            }
-
-
-        }
-
 
         static void CreateIslands(TileType massTile, TileType trimTile, (int, int) islandAmtRange, (int, int) islandGrowthRange)
         {
@@ -112,9 +95,6 @@ namespace ProcGenIslands
             ExpandIslands(massTile, islandGrowthRange);
             AddTrimToIslands(trimTile, massTile);
             MergeLayers(mapBaseLayer, mapIslandLayer);
-
-
-           
 
         }
 
@@ -138,8 +118,6 @@ namespace ProcGenIslands
                 }
             }
 
-
-
         }
 
         static void ExpandIslands(TileType massTile, (int, int) islandGrowthRange)
@@ -158,6 +136,8 @@ namespace ProcGenIslands
                     if (expDir.Item1 + currentCoord.Item1 > mapWidth - 1) continue;
                     if (expDir.Item2 + currentCoord.Item2 < 0) continue;
                     if (expDir.Item2 + currentCoord.Item2 > mapHeight -1) continue;
+
+
 
                     currentCoord = (currentCoord.Item1 + expDir.Item1, currentCoord.Item2 + expDir.Item2);
                     mapIslandLayer[currentCoord.Item1, currentCoord.Item2] = massTile;
@@ -214,8 +194,7 @@ namespace ProcGenIslands
         }
 
 
-        // TODO
-       // (int, int)[] dirs = { (0, -1), (0, 1), (-1, 0), (1, 0) };
+       
 
         static (int, int) SeedIsland(TileType tileType)
         {
