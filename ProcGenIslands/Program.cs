@@ -18,9 +18,10 @@ namespace ProcGenIslands
     }
 
 
-    internal class Program
+    internal static class Program
     {
-        static Dictionary<TileType, ConsoleColor> _tileColors = new Dictionary<TileType, ConsoleColor>
+
+        public static Dictionary<TileType, ConsoleColor> _tileColors = new Dictionary<TileType, ConsoleColor>
         {
              { TileType.Water, ConsoleColor.Blue },
              { TileType.Grass, ConsoleColor.DarkGreen },
@@ -29,7 +30,6 @@ namespace ProcGenIslands
              { TileType.None, ConsoleColor.Cyan}
 
         };
-
         static Random random = new Random();
 
 
@@ -61,6 +61,7 @@ namespace ProcGenIslands
         static void Main(string[] args)
         {
             InitializeMap();
+            IMapRenderer mapRenderer = new CoolRenderer();
             
             
             CreateIslands(TileType.Water, TileType.DeepWater, (2,5),(8,12));
@@ -69,9 +70,10 @@ namespace ProcGenIslands
 
             CreateIslands(TileType.Sand, TileType.None, (1, 3), (0, 1));
 
-           
 
-            DrawMap(new TileType[][,] {mapBaseLayer });
+
+            //DrawMap(new TileType[][,] {mapBaseLayer });
+            mapRenderer.DrawMap(new TileType[][,] { mapBaseLayer });
 
             Console.ReadKey();
 
@@ -247,6 +249,7 @@ namespace ProcGenIslands
             }
 
         }
+
 
 
     }
