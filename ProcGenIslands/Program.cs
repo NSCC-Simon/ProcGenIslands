@@ -11,7 +11,7 @@ namespace ProcGenIslands
     {
         Water,
         Grass,
-        Sand,
+        Ice,
         DeepWater,
         None
 
@@ -24,7 +24,7 @@ namespace ProcGenIslands
         {
              { TileType.Water, ConsoleColor.Blue },
              { TileType.Grass, ConsoleColor.DarkGreen },
-             { TileType.Sand, ConsoleColor.White },
+             { TileType.Ice, ConsoleColor.White },
              { TileType.DeepWater, ConsoleColor.DarkBlue},
              { TileType.None, ConsoleColor.Cyan}
 
@@ -60,23 +60,28 @@ namespace ProcGenIslands
 
         static void Main(string[] args)
         {
-            InitializeMap();
-            
-            
-            CreateIslands(TileType.Water, TileType.DeepWater, (2,5),(8,12));
 
-            CreateIslands(TileType.Grass, TileType.Water, (3, 7), (3, 35));
+            while(true)
+            {
 
-            CreateIslands(TileType.Sand, TileType.None, (1, 3), (0, 1));
+                InitializeMap();
 
-           
 
-            DrawMap(new TileType[][,] {mapBaseLayer });
+                CreateIslands(TileType.Water, TileType.DeepWater, (2, 5), (8, 12));
 
-            Console.ReadKey();
+                CreateIslands(TileType.Grass, TileType.Water, (3, 7), (3, 35));
+
+                CreateIslands(TileType.Ice, TileType.None, (1, 3), (0, 1));
+
+
+
+                DrawMap(new TileType[][,] { mapBaseLayer });
+
+                Console.ReadKey(true);
+            }
+
 
         }
-
 
         static void CreateBridge(TileType typeToConnect)
         {
@@ -135,8 +140,6 @@ namespace ProcGenIslands
 
                 }
             }
-
-
 
         }
 
